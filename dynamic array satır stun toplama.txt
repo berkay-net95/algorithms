@@ -1,0 +1,78 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void matrixcreateAndSum()
+{
+	
+    double static matrix[100][100];
+    int row, column;
+    int r,c,k=0;
+    int i;
+    double *ptr1, *ptr2;
+    double sum;
+    int biggest,smallest;
+   
+ 
+
+    printf("Enter the number of row in the matrix: ");
+    scanf("%d", &row);
+
+    printf("Enter the number of column in the matrix: ");
+    scanf("%d", &column);
+    
+	for(r = 0; r < row; r++)
+		for(c = 0; c < column; c++) {
+   			
+			   printf("Matrix[%d][%d] = ",r+1, c+1);
+   				scanf("%ld", &(matrix[r][c]));
+        	
+									}
+    for(r = 0; r < row; r++){
+		for(c = 0; c < column; c++)
+   				
+				 printf("%4d", matrix[r][c]);
+				 printf("\n");
+    						}
+      
+    ptr1 = (double*)malloc(sizeof(double)*row);
+    ptr2 = (double*)malloc(sizeof(double)*column);
+
+    printf("\n");
+
+     for(r=0;r<row;r++){
+       for(c=0;c<column;c++)
+        	sum=sum+matrix[r][c];    
+      		printf("Sum row:%d\n",sum);
+       		sum=0;
+      		ptr1[r]=sum;
+     					}
+		
+		
+			for(c=0;c<column;c++){
+        		for(r=0;r<row;r++)
+    
+      				sum=sum+matrix[r][c];
+
+      				printf("Sum column:%d\n",sum);
+       				sum=0;
+        			ptr2[c]=sum;
+          						}
+}
+
+int main() 
+{
+    double static matrix[100][100];
+    int row, column;
+    int r, c,k=0;
+    int i;
+    double *ptr1, *ptr2;
+    double sum;
+    int biggest,smallest;
+  
+ 	matrixcreateAndSum();
+
+    
+    system("PAUSE");
+    return matrix[r][c] ;
+
+}

@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define size 9
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char *argv[]) {
+int counter = 0;
+int array[size]={1,2,3,4,5,6,7,8,9};
+int sum = 0;
+
+	for(counter=0; counter<=size;counter++) {
+	
+			printf("%d" , array[counter]);
+			sum=sum+array[counter];
+							
+											
+											}
+				
+				printf("\n");
+
+				printf("sum = %d",sum);
+						return 0;
+}
